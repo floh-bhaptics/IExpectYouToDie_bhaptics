@@ -23,6 +23,8 @@ using SG.Phoenix.Assets.Code.WineCellar;
 using SG.Phoenix.Assets.Code.MovieSet;
 using SG.Phoenix.Assets.Code.Utility;
 
+[assembly: MelonInfo(typeof(IEYTD2_bhaptics.IEYTD2_bhaptics), "IEYTD2Bhaptics", "1.2", "Florian Fahrenberger")]
+[assembly: MelonGame("Schell Games", "I Expect You To Die 2")]
 
 namespace IEYTD2_bhaptics
 {
