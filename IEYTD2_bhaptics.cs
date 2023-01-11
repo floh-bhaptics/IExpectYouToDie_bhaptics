@@ -9,19 +9,20 @@ using HarmonyLib;
 using MyBhapticsTactsuit;
 
 using UnityEngine;
-using SG.Phoenix.Assets.Code.InputManagement;
-using SG.Phoenix.Assets.Code.Interactables;
-using SG.Phoenix.Assets.Code.WorldAttributes;
-using SG.Phoenix.Assets.Code.WorldAttributes.PlayerManagement;
-using SG.Phoenix.Assets.Code.WorldAttributes.Liquids;
+using Il2CppSG.Phoenix.Assets.Code.InputManagement;
+using Il2CppSG.Phoenix.Assets.Code.Interactables;
+using Il2CppSG.Phoenix.Assets.Code.WorldAttributes;
+using Il2CppSG.Phoenix.Assets.Code.WorldAttributes.PlayerManagement;
+using Il2CppSG.Phoenix.Assets.Code.WorldAttributes.Liquids;
 
-using SG.Phoenix.Assets.Code.Backstage;
-using SG.Phoenix.Assets.Code.PrivateJet;
-using SG.Phoenix.Assets.Code.Elevator;
-using SG.Phoenix.Assets.Code.Shop;
-using SG.Phoenix.Assets.Code.WineCellar;
-using SG.Phoenix.Assets.Code.MovieSet;
-using SG.Phoenix.Assets.Code.Utility;
+using Il2CppSG.Phoenix.Assets.Code.Backstage;
+using Il2CppSG.Phoenix.Assets.Code.PrivateJet;
+using Il2CppSG.Phoenix.Assets.Code.Elevator;
+using Il2CppSG.Phoenix.Assets.Code.Shop;
+using Il2CppSG.Phoenix.Assets.Code.WineCellar;
+using Il2CppSG.Phoenix.Assets.Code.MovieSet;
+using Il2CppSG.Phoenix.Assets.Code.Utility;
+using Il2Cpp;
 
 [assembly: MelonInfo(typeof(IEYTD2_bhaptics.IEYTD2_bhaptics), "IEYTD2Bhaptics", "1.2", "Florian Fahrenberger")]
 [assembly: MelonGame("Schell Games", "I Expect You To Die 2")]
@@ -30,12 +31,11 @@ namespace IEYTD2_bhaptics
 {
     public class IEYTD2_bhaptics : MelonMod
     {
-        public static TactsuitVR tactsuitVr;
+        public static TactsuitVR tactsuitVr = null!;
         public static bool shooterLoaded = false;
 
-        public override void OnApplicationStart()
+        public override void OnInitializeMelon()
         {
-            base.OnApplicationStart();
             tactsuitVr = new TactsuitVR();
             tactsuitVr.PlaybackHaptics("HeartBeat");
         }

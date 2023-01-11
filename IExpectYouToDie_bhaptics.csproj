@@ -34,10 +34,6 @@
       <HintPath>D:\Games\Steam\steamapps\common\I Expect You To Die 2\MelonLoader\net6\bHapticsLib.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="SG.GlobalEvents">
-      <HintPath>D:\Games\Steam\steamapps\common\I Expect You To Die 2\MelonLoader\Il2CppAssemblies\SG.GlobalEvents.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>D:\Games\Steam\steamapps\common\I Expect You To Die 2\MelonLoader\Il2CppAssemblies\UnityEngine.CoreModule.dll</HintPath>
       <Private>False</Private>
